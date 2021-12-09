@@ -113,7 +113,7 @@ Legendas:
 <a href="https://colab.research.google.com/github/jacksonrossi/ciencia-dados-darknet/blob/main/exploracao.ipynb" target="_blank"><img alt="Colab - Exploração de Dados" src="https://img.shields.io/badge/Open%20in%20Colab-grey?logo=google-colab" /></a>
 
 Pontos observados na exploração:
-- Dados majoritariamente numéricos. Das 85 colunas, 6 são strings: `flo_id`, `src_ip`, `dst_ip`, `timestamp`, `label` e `label.1`.
+- Dados majoritariamente numéricos. Das 85 colunas, 6 são strings: `flow_id`, `src_ip`, `dst_ip`, `timestamp`, `label` e `label.1`.
 - O dataset é mal distribuido na categoria Tor e Non-Tor
 
 |       | frequência  |porcentagem|
@@ -125,9 +125,6 @@ Pontos observados na exploração:
 
 
 - As colunas de IP (origem e destino) são atributos textuais e acredito que não faça sentido transformá-los em números. O que é possível fazer é substituir essas colunas por um indicativo de endereço ip privado, mas não acho que seja muito produtivo.
-- O mesmo vale pras colunas de porta, mesmo diferenciando por portas "bem conhecidas ou de sistema" que ficam no intervalo [0, 1024).
-- Como o TOR não usa o protocolo UDP, pode ser interessante usar isso na classificação. A única alteração que precisa ser feita é no tipo que é numérico, mas deveria ser um atributo categórico.
-- As colunas de fluxo parecem ser as mais relevantes, exceto as `flow_bytes/s` e `flow_packets/s`. Já as colunas que envolvem o tempo de idle e atividade não aparentam ser relevantes, como mostram os gráficos.
 
 Então, por enquanto:
 
