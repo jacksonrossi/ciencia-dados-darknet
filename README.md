@@ -113,7 +113,7 @@ Legendas:
 <a href="https://colab.research.google.com/github/jacksonrossi/ciencia-dados-darknet/blob/main/exploracao.ipynb" target="_blank"><img alt="Colab - Exploração de Dados" src="https://img.shields.io/badge/Open%20in%20Colab-grey?logo=google-colab" /></a>
 
 Pontos observados na exploração:
-- Dados majoritariamente numéricos. Das 85 colunas, 3 são strings: `source_ip`, `destination_ip` e `label`.
+- Dados majoritariamente numéricos. Das 85 colunas, 6 são strings: `flo_id`, `src_ip`, `dst_ip`, `timestamp`, `label` e `label.1`.
 - O dataset é mal distribuido na categoria Tor e Non-Tor
 
 |       | frequência  |porcentagem|
